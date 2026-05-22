@@ -30,12 +30,13 @@ def save_annotated_image(annotated_frame):
 
 
 if __name__ == "__main__":
-    image_path = "TestImages/image2.jpg"
+    image_path = "TestImages/image4.jpg"
     frame = load_image(image_path)
     annotated_frame = draw_predictions(frame)
     save_annotated_image(annotated_frame)
 
     results = get_predictions(frame)
+    #print(results[0].ocr.confidence)
     for r in results:
         plate_text = r.ocr.text
         ocr_confidence = r.ocr.confidence
