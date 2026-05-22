@@ -30,7 +30,7 @@ def save_annotated_image(annotated_frame):
 
 
 if __name__ == "__main__":
-    image_path = "TestImages/image7.jpg"
+    image_path = "TestImages/image2.jpg"
     frame = load_image(image_path)
     annotated_frame = draw_predictions(frame)
     save_annotated_image(annotated_frame)
